@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VS20 — VideoSampler 20 by schwwaaa</title>
+  <meta name="description" content="VS20 is a live video sampler for performance: 20 pads, a jam sequencer, a clean output for a second screen, quick MIDI assignments, and effects you can shape while you play.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top">VS20 <span>VideoSampler 20</span> <small>by schwwaaa</small></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#jam">Jam</a>
+      <a href="#midi">MIDI</a>
+      <a href="#alpha" class="button small">Join the alpha</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Live video sampler · desktop app</p>
+      <h1>Play video like an instrument.</h1>
+      <p class="lead">Twenty pads of footage, a jam sequencer that records your set, a clean picture for your projector, and MIDI control for hands-on performance.</p>
+      <div class="cta">
+        <a href="#alpha" class="button">Join the alpha</a>
+        <a href="#demo" class="button ghost">Watch the demo</a>
+      </div>
+    </section>
+
+    <section id="demo" class="demo">
+      <div class="video" id="demoVideo" data-youtube-id="PLACEHOLDER">
+        <p>Demo video coming soon.</p>
+      </div>
+    </section>
+
+    <section class="hero-shot">
+      <figure class="shot">
+        <img src="assets/img/monitor.jpg" alt="VS20 monitor showing a clip with the Slit dream look applied" width="1600" height="900">
+        <figcaption>The monitor, with the Slit dream look on the master output.</figcaption>
+      </figure>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Built for the stage</h2>
+      <div class="grid">
+        <article>
+          <h3>20 pads</h3>
+          <p>Trigger clips from the keyboard or a MIDI pad controller. Each pad holds its own clip, in and out points, speed, and effects.</p>
+        </article>
+        <article>
+          <h3>Quick assignments</h3>
+          <p>Select a pad, hit Learn, then press the note on your controller. Enter moves to the next pad, so a whole bank maps in one pass.</p>
+        </article>
+        <article>
+          <h3>Clean output</h3>
+          <p>Open output for a window with only the picture, for a projector, a second screen, or OBS. Takes record what the monitor shows.</p>
+        </article>
+        <article>
+          <h3>Looks you can shape live</h3>
+          <p>Pick a look to set a combination of effects at once, then shape it live. Video effects run on the GPU, so the set stays responsive.</p>
+        </article>
+        <article>
+          <h3>Slice from speech</h3>
+          <p>Cut a clip at pauses, at random, or at the words you search for. Transcription runs on your own machine.</p>
+        </article>
+        <article>
+          <h3>Works offline</h3>
+          <p>Local files, local transcription, no account and no cloud. Your footage stays on your machine.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="jam" class="copy-block">
+      <h2>Jam: record your set</h2>
+      <p>Hit Record jam and play. Every pad hit is recorded with its timing, so you can loop the jam, save it as a file, and load it back for the next show.</p>
+      <p class="muted">The top bar keeps the jam controls within reach: record, play, stop, loop, and a timer.</p>
+    </section>
+
+    <section id="output" class="spotlight reverse">
+      <div class="copy">
+        <h2>Output for a second screen</h2>
+        <p>Open output gives you a window with nothing but the picture. Drop it onto a projector or an external display, or capture it in OBS.</p>
+        <p class="muted">The monitor stays on the laptop for you, and the output stays clean for the room.</p>
+      </div>
+    </section>
+
+    <section id="midi" class="spotlight">
+      <div class="copy">
+        <h2>MIDI, from the start</h2>
+        <p>Any MIDI device can trigger pads. Grid controllers light up to show pad states: ready, selected, playing, and learning.</p>
+        <p class="muted">Set the note layout and LED colours once, and keep them between sessions.</p>
+      </div>
+      <figure class="shot">
+        <img src="assets/img/midi.jpg" alt="The MIDI controller panel in VS20, with LED colours and pad states" width="1600" height="900" loading="lazy">
+        <figcaption>MIDI setup: LED colours, pad states, and test lights.</figcaption>
+      </figure>
+    </section>
+
+    <section id="looks" class="looks">
+      <h2>Looks</h2>
+      <p class="muted">A look sets many effects at once, and resets everything else. Pick one, then shape it while you play.</p>
+      <figure class="shot">
+        <img src="assets/img/effects.jpg" alt="The effects rack open at the bottom of VS20, with colour, geometry, texture and time controls" width="1600" height="900" loading="lazy">
+        <figcaption>The effects rack, opened from the bottom of the window.</figcaption>
+      </figure>
+    </section>
+
+    <section id="alpha" class="alpha">
+      <h2>Join the alpha</h2>
+      <p class="muted">We are testing VS20 with a small group of performers and visual artists. Tell us who you are and we will send you the build for your platform.</p>
+      <form id="alphaForm" class="signup" novalidate>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>Name <span class="optional">(optional)</span>
+          <input type="text" name="name" autocomplete="name">
+        </label>
+        <label>What would you use it for? <span class="optional">(optional)</span>
+          <textarea name="notes" rows="3"></textarea>
+        </label>
+        <button type="submit" class="button">Request access</button>
+        <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>VS20 by schwwaaa. Runs on macOS and Windows.</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

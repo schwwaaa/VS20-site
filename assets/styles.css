@@ -1,0 +1,185 @@
+/* VS20 landing page. Colours match the app's amber terminal look. */
+:root {
+  --bg: #0b0905;
+  --panel: #161109;
+  --line: #3a2a12;
+  --text: #f6e7c4;
+  --muted: #bfa77a;
+  --amber: #ffb43a;
+  --amber-hot: #ffd27a;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--amber); }
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 20px;
+  background: rgba(11, 9, 5, 0.92);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  color: var(--amber);
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+.brand span { color: var(--muted); font-weight: 400; margin-left: 8px; font-size: 0.85em; white-space: nowrap; }
+.brand small { color: var(--muted); font-weight: 400; font-size: 0.75em; margin-left: 10px; white-space: nowrap; }
+
+.top nav { display: flex; align-items: center; gap: 18px; }
+.top nav a { color: var(--muted); text-decoration: none; font-size: 0.9em; }
+.top nav a:hover { color: var(--amber-hot); }
+.top nav a.button { color: #1a1206; }
+.top nav a.button:hover { color: #1a1206; }
+
+main, footer { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+section:last-of-type { border-bottom: 0; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 12px; }
+h1 { font-size: clamp(30px, 6vw, 52px); color: var(--amber-hot); }
+h2 { font-size: 24px; color: var(--amber); letter-spacing: 0.04em; }
+h3 { font-size: 17px; color: var(--amber-hot); }
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 13px;
+}
+.lead { font-size: 18px; max-width: 640px; color: var(--text); }
+.muted { color: var(--muted); }
+
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 32px; }
+
+.button {
+  display: inline-block;
+  padding: 11px 18px;
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  background: var(--amber);
+  color: #1a1206;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: var(--amber-hot); }
+.button.ghost { background: transparent; color: var(--amber); }
+.button.ghost:hover { background: rgba(255, 180, 58, 0.1); }
+.button.small { padding: 7px 12px; font-size: 14px; }
+
+.demo { padding-top: 8px; }
+.video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  background: var(--panel);
+  border: 1px dashed var(--amber);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.video p { margin: 0; color: var(--muted); }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.hero-shot { padding-top: 8px; }
+
+.spotlight {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 32px;
+  align-items: center;
+}
+.spotlight.reverse .copy { order: 2; }
+.copy-block { max-width: 640px; }
+.copy-block p { margin: 0 0 14px; }
+.spotlight p { margin: 0 0 14px; }
+.spotlight .muted { font-size: 15px; }
+
+.shot { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--panel); }
+.shot figcaption { padding: 10px 14px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.grid article {
+  padding: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.grid p { margin: 0; color: var(--muted); font-size: 15px; }
+
+.looks .muted { max-width: 640px; }
+.looks .shot { margin-top: 24px; }
+
+.signup {
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+  margin-top: 20px;
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.signup label { display: grid; gap: 6px; font-size: 14px; color: var(--muted); }
+.signup input,
+.signup textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+  font-size: 16px; /* stops iOS zooming on focus */
+}
+.signup input:focus,
+.signup textarea:focus { outline: 2px solid var(--amber); outline-offset: 1px; }
+.signup button { justify-self: start; cursor: pointer; }
+.signup button:disabled { opacity: 0.6; cursor: default; }
+.optional { color: var(--line); }
+.status { margin: 0; min-height: 1.4em; font-size: 14px; color: var(--amber-hot); }
+.status.error { color: #ff8a6b; }
+
+footer { padding-top: 32px; padding-bottom: 40px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+footer p { margin: 0; }
+
+@media (max-width: 640px) {
+  .top { padding: 12px 16px; }
+  .top nav a:not(.button) { display: none; }
+  .brand span { display: none; }
+  .brand small { margin-left: 0; display: block; }
+  main, footer { padding: 0 16px; }
+  section { padding: 40px 0; }
+  .cta .button { flex: 1 1 100%; text-align: center; }
+  .signup { padding: 18px; }
+  .spotlight { grid-template-columns: 1fr; gap: 20px; }
+  .spotlight.reverse .copy { order: 0; }
+}
